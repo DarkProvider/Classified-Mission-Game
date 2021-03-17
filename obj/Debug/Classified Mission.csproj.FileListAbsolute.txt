@@ -1,0 +1,9 @@
+C:\Users\alakk\source\repos\Classified Mission\Classified Mission\bin\Debug\Classified Mission.exe.config
+C:\Users\alakk\source\repos\Classified Mission\Classified Mission\bin\Debug\Classified Mission.exe
+C:\Users\alakk\source\repos\Classified Mission\Classified Mission\bin\Debug\Classified Mission.pdb
+C:\Users\alakk\source\repos\Classified Mission\Classified Mission\obj\Debug\Classified Mission.csprojAssemblyReference.cache
+C:\Users\alakk\source\repos\Classified Mission\Classified Mission\obj\Debug\Classified_Mission.Form1.resources
+C:\Users\alakk\source\repos\Classified Mission\Classified Mission\obj\Debug\Classified_Mission.Properties.Resources.resources
+C:\Users\alakk\source\repos\Classified Mission\Classified Mission\obj\Debug\Classified Mission.csproj.GenerateResource.cache
+C:\Users\alakk\source\repos\Classified Mission\Classified Mission\obj\Debug\Classified Mission.exe
+C:\Users\alakk\source\repos\Classified Mission\Classified Mission\obj\Debug\Classified Mission.pdb
