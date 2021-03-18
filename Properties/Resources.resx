@@ -118,17 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="p1_walk081" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk081.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Sun" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileBrown_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBrown_13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tileBlue_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tileBlue_23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tileBrown_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tileBrown_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="spaceRockets_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spaceRockets_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="p1_walk031" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk031.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coin.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,6 +151,12 @@
   <data name="tileYellow_04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileYellow_04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tileBrown_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tileBrown_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p1_stand1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_stand1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tileBrown_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBrown_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,6 +175,9 @@
   <data name="tileGreen_05" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileGreen_05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="p1_walk05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="set3_hills" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\set3_hills.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -177,6 +189,9 @@
   </data>
   <data name="tileBlue_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBlue_14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p1_walk10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileBrown_05" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBrown_05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,23 +208,38 @@
   <data name="tileBlue_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBlue_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="p1_stand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_stand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p1_walk03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="yellowJewel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yellowJewel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileYellow_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileYellow_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="set3_tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\set3_tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="spaceShips_0071" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spaceShips_0071.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tileBrown_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tileBrown_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tileBlue_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tileBlue_23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tileYellow_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tileYellow_18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="p1_walk041" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk041.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="set2_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\set2_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p1_walk091" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk091.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p1_walk01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="set5_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\set5_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,11 +250,17 @@
   <data name="tileYellow_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileYellow_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="playerGrey_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playerGrey_dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="blueCrystal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blueCrystal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileBrown_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBrown_18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p1_walk011" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileGreen_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileGreen_25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -249,6 +285,15 @@
   </data>
   <data name="tileYellow_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileYellow_14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tileBrown_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tileBrown_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spaceParts_045" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spaceParts_045.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tileBrown_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tileBrown_27.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileYellow_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileYellow_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,6 +325,12 @@
   <data name="tileYellow_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileYellow_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="p1_walk071" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk071.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p1_walk02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="set2_tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\set2_tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -295,6 +346,9 @@
   <data name="tileGreen_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileGreen_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="spaceBuilding_0241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spaceBuilding_0241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tileBlue_05" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBlue_05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -307,8 +361,8 @@
   <data name="tileGreen_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileGreen_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tileBrown_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tileBrown_17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tileYellow_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tileYellow_18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="spaceRockets_003" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spaceRockets_003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -346,6 +400,9 @@
   <data name="tileYellow_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileYellow_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="p1_walk11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Mars" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -361,11 +418,8 @@
   <data name="spaceParts_031" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spaceParts_031.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tileBrown_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tileBrown_15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tileGreen_08" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tileGreen_08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="platformPack_tile058" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\platformPack_tile058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileGreen_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileGreen_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -403,9 +457,6 @@
   <data name="tileGreen_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileGreen_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tileBrown_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tileBrown_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="tileBlue_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBlue_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -415,8 +466,8 @@
   <data name="tileGreen_09" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileGreen_09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="spaceBuilding_0241" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spaceBuilding_0241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tileBrown_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tileBrown_15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileBlue_04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBlue_04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -445,8 +496,11 @@
   <data name="tileGreen_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileGreen_14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tileBlue_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tileBlue_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="p1_walk09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tileBrown_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tileBrown_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileGreen_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileGreen_27.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -472,8 +526,11 @@
   <data name="yellowGem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yellowGem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="spaceParts_045" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spaceParts_045.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="p1_walk07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tileBrown_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tileBrown_17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Jupitar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Jupitar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -486,6 +543,9 @@
   </data>
   <data name="spaceBuilding_0231" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spaceBuilding_0231.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p1_walk051" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk051.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="set1_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\set1_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -511,8 +571,8 @@
   <data name="spaceShips_008" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spaceShips_008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="set3_tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\set3_tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tileGreen_08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tileGreen_08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileBrown_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBrown_14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -529,17 +589,23 @@
   <data name="blueJewel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blueJewel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="p1_walk061" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk061.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tileYellow_07" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileYellow_07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="set5_background_stars_Blurred" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\set5_background_stars_Blurred.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tileBrown_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tileBrown_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spaceRockets_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spaceRockets_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Earth" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Earth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p1_walk08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileBrown_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBrown_25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -583,14 +649,17 @@
   <data name="tileBrown_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBrown_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tileBrown_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tileBrown_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tileBlue_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tileBlue_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileGreen_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileGreen_19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileBrown_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBrown_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p1_walk06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileBlue_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBlue_19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -604,8 +673,8 @@
   <data name="Moon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Moon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="playerGrey_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\playerGrey_dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="platformPack_tile048" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\platformPack_tile048.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileBlue_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBlue_13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -628,8 +697,8 @@
   <data name="Sun1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sun1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tileBrown_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tileBrown_27.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="p1_walk04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileYellow_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileYellow_23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -640,6 +709,9 @@
   <data name="tileGreen_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileGreen_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="p1_walk021" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1_walk021.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tileGreen_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileGreen_13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -648,6 +720,9 @@
   </data>
   <data name="tileBlue_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBlue_06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="platformPack_tile049" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\platformPack_tile049.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tileBrown_09" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileBrown_09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -664,13 +739,7 @@
   <data name="tileYellow_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tileYellow_06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="platformPack_tile048" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\platformPack_tile048.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="platformPack_tile058" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\platformPack_tile058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="platformPack_tile049" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\platformPack_tile049.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="set5_background_stars_Blurred_Long" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\set5_background_stars_Blurred_Long.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -635,5 +635,74 @@
   <ItemGroup>
     <None Include="Resources\platformPack_tile049.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_stand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_stand1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk071.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk091.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1_walk11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set5_background_stars_Blurred_Long.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

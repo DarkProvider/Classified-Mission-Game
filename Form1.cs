@@ -12,6 +12,17 @@ namespace Classified_Mission
 {
     public partial class Form1 : Form
     {
+
+
+		bool goLeft, goRight, jumping, hasKey;
+
+		int jumpSpeed = 10;
+		int force = 8;
+		int score = 0;
+
+		int playerSpeed = 10;
+		int backgroundSpeed = 10;
+
         public Form1()
         {
             InitializeComponent();
@@ -19,8 +30,9 @@ namespace Classified_Mission
 			//This will mount the item to the backgeound to make it transparent
 
 			//Platforms
-			Background.Controls.Add(PlatformDown2);
-			Background.Controls.Add(PlatformDown3);
+			//Background.Controls.Add(PlatformDown1);
+			//Background.Controls.Add(PlatformDown2);
+			//Background.Controls.Add(PlatformDown3);
 			Background.Controls.Add(PlatformUp1);
 			Background.Controls.Add(PlatformUp2);
 			Background.Controls.Add(PlatformUp3);
@@ -35,10 +47,10 @@ namespace Classified_Mission
 			Background.Controls.Add(Earth);
 			Background.Controls.Add(Moon);
 			Background.Controls.Add(Mars);
-			Background2.Controls.Add(Jupitar);
-			Background2.Controls.Add(Saturn);
-			Background2.Controls.Add(Neptune);
-			Background3.Controls.Add(Uranus);
+			Background.Controls.Add(Jupitar);
+			Background.Controls.Add(Saturn);
+			Background.Controls.Add(Neptune);
+			Background.Controls.Add(Uranus);
 
 			//Coins
 			Background.Controls.Add(Coin1);
@@ -52,16 +64,20 @@ namespace Classified_Mission
 
 			//Other Objects
 			Background.Controls.Add(Door);
+			Background.Controls.Add(Key1);
+			//Background.Controls.Add(Player);
 
 
 
 			//This will place the objects and change the color of the background to transparent relatively to the parent background it is located in
 
 			//Platforms
+			PlatformDown1.BackColor = Color.Transparent;
+			PlatformDown1.Location = new Point(283, 399);
 			PlatformDown2.BackColor = Color.Transparent;
-			PlatformDown2.Location = new Point(516, 409);
+			PlatformDown2.Location = new Point(516, 399);
 			PlatformDown3.BackColor = Color.Transparent;
-			PlatformDown3.Location = new Point(240, 409);
+			PlatformDown3.Location = new Point(240, 399);
 			PlatformUp1.BackColor = Color.Transparent;
 			PlatformUp1.Location = new Point(17, 256);
 			PlatformUp2.BackColor = Color.Transparent;
@@ -85,13 +101,13 @@ namespace Classified_Mission
 			Mars.BackColor = Color.Transparent;
 			Mars.Location = new Point(1258, 282);
 			Jupitar.BackColor = Color.Transparent;
-			Jupitar.Location = new Point(254, 81);
+			Jupitar.Location = new Point(1623, 46);
 			Saturn.BackColor = Color.Transparent;
-			Saturn.Location = new Point(794, 203);
+			Saturn.Location = new Point(2030, 203);
 			Neptune.BackColor = Color.Transparent;
-			Neptune.Location = new Point(1258, 286);
+			Neptune.Location = new Point(2619, 155);
 			Uranus.BackColor = Color.Transparent;
-			Uranus.Location = new Point(160, 90);
+			Uranus.Location = new Point(3050, 46);
 
 			//Coins
 			Coin1.BackColor = Color.Transparent;
@@ -112,6 +128,10 @@ namespace Classified_Mission
 			//Other Objects
 			Door.BackColor = Color.Transparent;
 			Door.Location = new Point(79, 207);
+			Key1.BackColor = Color.Transparent;
+			Key1.Location = new Point(708, 275);
+			//Player.BackColor = Color.Transparent;
+			//Player.Location = new Point(254, 355);
 
 		}
 
@@ -148,6 +168,125 @@ namespace Classified_Mission
 		private void pictureBox2_Click_1(object sender, EventArgs e)
 		{
 
+		}
+
+		private void PlatformDown2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void MainTimerEvent(object sender, EventArgs e)
+		{
+			GameScore.Text = "Score: " + score;
+			Player.Top += jumpSpeed;
+
+			if (goLeft == true && Player.Left > 3) 
+			{
+				Player.Left -= playerSpeed;
+			}
+			if (goRight == true && Player.Left + (Player.Width + 20) < this.ClientSize.Width) 
+			{
+				Player.Left += playerSpeed;
+			}
+
+
+			if (goLeft == true && Background.Left < 0) 
+			{
+				Background.Left += backgroundSpeed;
+			}
+
+			if (goRight == true && Background.Left > -2409) 
+			{
+				Background.Left -= backgroundSpeed;
+			}
+
+			if (jumping == true) 
+			{
+				jumpSpeed = -15;
+				force -= 1;
+			}
+			else
+			{
+				jumpSpeed = 15;
+			}
+
+			if (jumping == true && force < 0) 
+			{
+				jumping = false;
+			}
+
+			foreach (Control x in this.Controls) 
+			{
+				if (x is PictureBox && (string)x.Tag == "Platform") 
+				{
+
+					if (Player.Bounds.IntersectsWith(x.Bounds) && jumping == false) 
+					
+					{
+
+						force = 8;
+						Player.Top = x.Top - Player.Height;
+						jumpSpeed = 0;
+					
+					}
+
+					x.BringToFront();
+				
+				}
+			}
+		}
+
+		private void KeyIsDown(object sender, KeyEventArgs e)
+		{
+
+			if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A) 
+			{
+				goLeft = true;
+			}
+			if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
+			{
+				goRight = true;
+			}
+			if (e.KeyCode == Keys.Space && jumping == false)
+			{
+				jumping = true;
+			}
+		}
+
+		private void KeyIsUp(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A) 
+			{
+				goLeft = false;
+			}
+			if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
+			{
+				goRight = false;
+			}
+			if (e.KeyCode == Keys.Space && jumping == true)
+			{
+				jumping = false;
+			}
+		}
+
+		private void CloseGame(object sender, FormClosedEventArgs e)
+		{
+
+		}
+
+		private void RestartGame() 
+		{ 
+		
+		}
+
+		private void MoveGameElements(string direction) 
+		{ 
+		
 		}
 	}
 }
