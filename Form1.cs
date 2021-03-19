@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Classified_Mission
 {
-    public partial class Form1 : Form
+    public partial class ClassifiedMissionGame : Form
     {
 
 
@@ -23,7 +23,7 @@ namespace Classified_Mission
 		int playerSpeed = 10;
 		int backgroundSpeed = 10;
 
-        public Form1()
+        public ClassifiedMissionGame()
         {
             InitializeComponent();
 
@@ -33,12 +33,12 @@ namespace Classified_Mission
 			//Background.Controls.Add(PlatformDown1);
 			//Background.Controls.Add(PlatformDown2);
 			//Background.Controls.Add(PlatformDown3);
-			Background.Controls.Add(PlatformUp1);
-			Background.Controls.Add(PlatformUp2);
-			Background.Controls.Add(PlatformUp3);
-			Background.Controls.Add(PlatformUp4);
-			Background.Controls.Add(PlatformUp5);
-			Background.Controls.Add(PlatformUp6);
+			//Background.Controls.Add(PlatformUp1);
+			//Background.Controls.Add(PlatformUp2);
+			//Background.Controls.Add(PlatformUp3);
+			//Background.Controls.Add(PlatformUp4);
+			//Background.Controls.Add(PlatformUp5);
+			//Background.Controls.Add(PlatformUp6);
 
 
 
@@ -53,7 +53,7 @@ namespace Classified_Mission
 			Background.Controls.Add(Uranus);
 
 			//Coins
-			Background.Controls.Add(Coin1);
+			//Background.Controls.Add(Coin1);
 			Background.Controls.Add(Coin2);
 			Background.Controls.Add(Coin3);
 			Background.Controls.Add(Coin4);
@@ -63,8 +63,8 @@ namespace Classified_Mission
 
 
 			//Other Objects
-			Background.Controls.Add(Door);
-			Background.Controls.Add(Key1);
+			//Background.Controls.Add(Door);
+			//Background.Controls.Add(Key1);
 			//Background.Controls.Add(Player);
 
 
@@ -238,8 +238,50 @@ namespace Classified_Mission
 					x.BringToFront();
 				
 				}
+
+				if (x is PictureBox && (string)x.Tag == "Coin") 
+				{
+
+					if (Player.Bounds.IntersectsWith(x.Bounds) && x.Visible == true) 
+					{
+
+						x.Visible = false;
+						score += 1;
+
+					}
+				
+				}
+			}
+
+			if (Player.Bounds.IntersectsWith(Key1.Bounds)) 
+			{
+
+				Key1.Visible = false;
+				hasKey = true;
+
+			}
+
+			if (Player.Bounds.IntersectsWith(Door.Bounds) && hasKey == true) 
+			{
+
+				Player.Visible = false;
+				GameTimer.Stop();
+				MessageBox.Show("Well done, you made it to the end with the appropriate amount of keys!" + Environment.NewLine + Environment.NewLine + "You wanna play again?");
+				RestartGame();
+			
+			}
+
+			if (Player.Top + Player.Height > this.ClientSize.Height) 
+			{
+
+				GameTimer.Stop();
+				MessageBox.Show("You fell into the void which means you died, you should've known that before doing it!" + Environment.NewLine + Environment.NewLine + "I don't normally give second chances, but do you wanna try again?");
+				RestartGame();
+
 			}
 		}
+
+		
 
 		private void KeyIsDown(object sender, KeyEventArgs e)
 		{
@@ -276,12 +318,16 @@ namespace Classified_Mission
 
 		private void CloseGame(object sender, FormClosedEventArgs e)
 		{
-
+			Application.Exit();
 		}
 
 		private void RestartGame() 
-		{ 
-		
+		{
+
+			ClassifiedMissionGame newWindow = new ClassifiedMissionGame();
+			newWindow.Show();
+			this.Hide();
+
 		}
 
 		private void MoveGameElements(string direction) 

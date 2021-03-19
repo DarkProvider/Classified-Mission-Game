@@ -1,6 +1,6 @@
 namespace Classified_Mission
 {
-    partial class Form1
+    partial class ClassifiedMissionGame
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Classified_Mission
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassifiedMissionGame));
             this.GameScore = new System.Windows.Forms.Label();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
             this.Background = new System.Windows.Forms.PictureBox();
@@ -133,7 +133,7 @@ namespace Classified_Mission
             // Key1
             // 
             this.Key1.Image = global::Classified_Mission.Properties.Resources.keyRed;
-            this.Key1.Location = new System.Drawing.Point(708, 268);
+            this.Key1.Location = new System.Drawing.Point(330, 342);
             this.Key1.Name = "Key1";
             this.Key1.Size = new System.Drawing.Size(34, 38);
             this.Key1.TabIndex = 32;
@@ -188,7 +188,7 @@ namespace Classified_Mission
             this.Coin7.Size = new System.Drawing.Size(27, 25);
             this.Coin7.TabIndex = 27;
             this.Coin7.TabStop = false;
-            this.Coin7.Tag = "coin7";
+            this.Coin7.Tag = "Coin";
             // 
             // Coin6
             // 
@@ -198,7 +198,7 @@ namespace Classified_Mission
             this.Coin6.Size = new System.Drawing.Size(27, 25);
             this.Coin6.TabIndex = 27;
             this.Coin6.TabStop = false;
-            this.Coin6.Tag = "coin6";
+            this.Coin6.Tag = "Coin";
             // 
             // Coin1
             // 
@@ -208,7 +208,7 @@ namespace Classified_Mission
             this.Coin1.Size = new System.Drawing.Size(27, 25);
             this.Coin1.TabIndex = 27;
             this.Coin1.TabStop = false;
-            this.Coin1.Tag = "coin1";
+            this.Coin1.Tag = "Coin";
             // 
             // Coin2
             // 
@@ -218,7 +218,7 @@ namespace Classified_Mission
             this.Coin2.Size = new System.Drawing.Size(27, 25);
             this.Coin2.TabIndex = 27;
             this.Coin2.TabStop = false;
-            this.Coin2.Tag = "coin2";
+            this.Coin2.Tag = "Coin";
             // 
             // Coin3
             // 
@@ -228,7 +228,7 @@ namespace Classified_Mission
             this.Coin3.Size = new System.Drawing.Size(27, 25);
             this.Coin3.TabIndex = 27;
             this.Coin3.TabStop = false;
-            this.Coin3.Tag = "coin3";
+            this.Coin3.Tag = "Coin";
             // 
             // Coin4
             // 
@@ -238,7 +238,7 @@ namespace Classified_Mission
             this.Coin4.Size = new System.Drawing.Size(27, 25);
             this.Coin4.TabIndex = 27;
             this.Coin4.TabStop = false;
-            this.Coin4.Tag = "coin4";
+            this.Coin4.Tag = "Coin";
             // 
             // Coin5
             // 
@@ -248,7 +248,7 @@ namespace Classified_Mission
             this.Coin5.Size = new System.Drawing.Size(27, 25);
             this.Coin5.TabIndex = 26;
             this.Coin5.TabStop = false;
-            this.Coin5.Tag = "coin5";
+            this.Coin5.Tag = "Coin";
             // 
             // PlatformUp3
             // 
@@ -396,7 +396,7 @@ namespace Classified_Mission
             this.PlatformDown1.Tag = "Platform";
             this.PlatformDown1.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
-            // Form1
+            // ClassifiedMissionGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -431,7 +431,7 @@ namespace Classified_Mission
             this.Controls.Add(this.PlatformDown1);
             this.Controls.Add(this.Background);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "ClassifiedMissionGame";
             this.Text = "Classified Mission";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CloseGame);
             this.Load += new System.EventHandler(this.Form1_Load);

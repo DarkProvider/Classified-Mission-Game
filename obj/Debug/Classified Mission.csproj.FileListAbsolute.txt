@@ -11,8 +11,8 @@ J:\Classified-Mission-Game\bin\Debug\Classified Mission.exe.config
 J:\Classified-Mission-Game\bin\Debug\Classified Mission.exe
 J:\Classified-Mission-Game\bin\Debug\Classified Mission.pdb
 J:\Classified-Mission-Game\obj\Debug\Classified Mission.csprojAssemblyReference.cache
-J:\Classified-Mission-Game\obj\Debug\Classified_Mission.Form1.resources
 J:\Classified-Mission-Game\obj\Debug\Classified_Mission.Properties.Resources.resources
 J:\Classified-Mission-Game\obj\Debug\Classified Mission.csproj.GenerateResource.cache
 J:\Classified-Mission-Game\obj\Debug\Classified Mission.exe
 J:\Classified-Mission-Game\obj\Debug\Classified Mission.pdb
+J:\Classified-Mission-Game\obj\Debug\Classified_Mission.ClassifiedMissionGame.resources
