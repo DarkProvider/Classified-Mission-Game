@@ -14,7 +14,7 @@ namespace Classified_Mission
     {
 
 
-		bool goLeft, goRight, jumping, hasKey;
+		bool goLeft, goRight, jumping, hasGas;
 
 		int jumpSpeed = 10;
 		int force = 8;
@@ -30,15 +30,18 @@ namespace Classified_Mission
 			//This will mount the item to the backgeound to make it transparent
 
 			//Platforms
-			//Background.Controls.Add(PlatformDown1);
-			//Background.Controls.Add(PlatformDown2);
-			//Background.Controls.Add(PlatformDown3);
-			//Background.Controls.Add(PlatformUp1);
-			//Background.Controls.Add(PlatformUp2);
-			//Background.Controls.Add(PlatformUp3);
-			//Background.Controls.Add(PlatformUp4);
-			//Background.Controls.Add(PlatformUp5);
-			//Background.Controls.Add(PlatformUp6);
+			Background.Controls.Add(PlatformDown1);
+			Background.Controls.Add(PlatformDown2);
+			Background.Controls.Add(PlatformDown3);
+			Background.Controls.Add(PlatformDown4);
+			Background.Controls.Add(PlatformDown5);
+			Background.Controls.Add(PlatformDown6);
+			Background.Controls.Add(PlatformUp1);
+			Background.Controls.Add(PlatformUp2);
+			Background.Controls.Add(PlatformUp3);
+			Background.Controls.Add(PlatformUp4);
+			Background.Controls.Add(PlatformUp5);
+			Background.Controls.Add(PlatformUp6);
 
 
 
@@ -63,7 +66,8 @@ namespace Classified_Mission
 
 
 			//Other Objects
-			//Background.Controls.Add(Door);
+			Background.Controls.Add(DoorL1);
+			Background.Controls.Add(Ship); 
 			//Background.Controls.Add(Key1);
 			//Background.Controls.Add(Player);
 
@@ -78,6 +82,12 @@ namespace Classified_Mission
 			PlatformDown2.Location = new Point(516, 399);
 			PlatformDown3.BackColor = Color.Transparent;
 			PlatformDown3.Location = new Point(240, 399);
+			PlatformDown4.BackColor = Color.Transparent;
+			PlatformDown4.Location = new Point(2767, 383);
+			PlatformDown5.BackColor = Color.Transparent;
+			PlatformDown5.Location = new Point(2810, 383);
+			PlatformDown6.BackColor = Color.Transparent;
+			PlatformDown6.Location = new Point(3043, 383);
 			PlatformUp1.BackColor = Color.Transparent;
 			PlatformUp1.Location = new Point(17, 256);
 			PlatformUp2.BackColor = Color.Transparent;
@@ -126,10 +136,13 @@ namespace Classified_Mission
 			Coin7.Location = new Point(460, 324);
 
 			//Other Objects
-			Door.BackColor = Color.Transparent;
-			Door.Location = new Point(79, 207);
-			Key1.BackColor = Color.Transparent;
-			Key1.Location = new Point(708, 275);
+			DoorL1.BackColor = Color.Transparent;
+			DoorL1.Location = new Point(79, 207);
+			Gas.BackColor = Color.Transparent;
+			Gas.Location = new Point(708, 275);
+			Ship.BackColor = Color.Transparent;
+			Ship.Location = new Point(2901, 329);
+
 			//Player.BackColor = Color.Transparent;
 			//Player.Location = new Point(254, 355);
 
@@ -198,11 +211,13 @@ namespace Classified_Mission
 			if (goLeft == true && Background.Left < 0) 
 			{
 				Background.Left += backgroundSpeed;
+				MoveGameElements("forward");
 			}
 
 			if (goRight == true && Background.Left > -2409) 
 			{
 				Background.Left -= backgroundSpeed;
+				MoveGameElements("backward");
 			}
 
 			if (jumping == true) 
@@ -220,10 +235,43 @@ namespace Classified_Mission
 				jumping = false;
 			}
 
-			foreach (Control x in this.Controls) 
+			foreach (Control x in this.Controls)
 			{
-				if (x is PictureBox && (string)x.Tag == "Platform") 
+				string LockGreenTop = PictureBox.picture;
+				switch (LockGreenTop)
 				{
+
+					case (Player.Bounds.IntersectsWith(Ship.Bounds) && hasGas == true):
+						UpdatePictureBox(@"[Images1 Path]");
+						break;
+
+				}
+
+
+				if (x is PictureBox && (string)x.Tag == "player")
+				{ 
+				
+
+
+				}
+
+				if (x is PictureBox && (string)x.Tag == "doorl2")
+				{
+					x.Visible = false;
+				}
+				if (x is PictureBox && (string)x.Tag == "shipl2")
+				{
+					x.Visible = false;
+				}
+
+				if (x is PictureBox && (string)x.Tag == "Platform_l2") 
+				{
+
+					if (x is PictureBox && (string)x.Tag == "Platform_l2" ) 
+					{
+						x.Visible = false;
+					}
+
 
 					if (Player.Bounds.IntersectsWith(x.Bounds) && jumping == false) 
 					
@@ -242,6 +290,7 @@ namespace Classified_Mission
 				if (x is PictureBox && (string)x.Tag == "Coin") 
 				{
 
+
 					if (Player.Bounds.IntersectsWith(x.Bounds) && x.Visible == true) 
 					{
 
@@ -253,22 +302,30 @@ namespace Classified_Mission
 				}
 			}
 
-			if (Player.Bounds.IntersectsWith(Key1.Bounds)) 
+			if (Player.Bounds.IntersectsWith(Gas.Bounds)) 
 			{
 
-				Key1.Visible = false;
-				hasKey = true;
+				Gas.Visible = false;
+				hasGas = true;
 
 			}
 
-			if (Player.Bounds.IntersectsWith(Door.Bounds) && hasKey == true) 
+			if (Player.Bounds.IntersectsWith(Ship.Bounds) && hasGas == true)
 			{
+
 
 				Player.Visible = false;
 				GameTimer.Stop();
-				MessageBox.Show("Well done, you made it to the end with the appropriate amount of keys!" + Environment.NewLine + Environment.NewLine + "You wanna play again?");
+				MessageBox.Show("Well done, you made it to the ship with a full gas tank!" + Environment.NewLine + Environment.NewLine + "You wanna play again?");
+				Ship.Visible = false;
 				RestartGame();
-			
+
+			}
+			else if (Player.Bounds.IntersectsWith(Ship.Bounds) && hasGas == false)
+			{
+
+				MessageBox.Show("You will need gas to power on the ship!" + Environment.NewLine + Environment.NewLine + "Go back and get the gas ffs!!!");
+
 			}
 
 			if (Player.Top + Player.Height > this.ClientSize.Height) 
@@ -316,6 +373,26 @@ namespace Classified_Mission
 			}
 		}
 
+		private void pictureBox6_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void PlatformDown4_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void PlatformDown5_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void PlatformDown6_Click(object sender, EventArgs e)
+		{
+
+		}
+
 		private void CloseGame(object sender, FormClosedEventArgs e)
 		{
 			Application.Exit();
@@ -332,7 +409,31 @@ namespace Classified_Mission
 
 		private void MoveGameElements(string direction) 
 		{ 
-		
+
+			foreach (Control x in this.Controls) 
+			{
+
+				if (x is PictureBox && (string)x.Tag == "Platform_l2" || x is PictureBox && (string)x.Tag == "Coin" || x is PictureBox && (string)x.Tag == "key1" || x is PictureBox && (string)x.Tag == "door1_l1") 
+				{
+
+
+					if (direction == "backward") 
+					{
+
+						x.Left -= backgroundSpeed;
+					
+					}
+					if (direction == "forward") 
+					{
+
+						x.Left += backgroundSpeed;
+
+					}
+				
+				}
+			
+			}
+			
 		}
 	}
 }

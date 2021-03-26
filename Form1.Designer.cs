@@ -32,13 +32,28 @@ namespace Classified_Mission
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassifiedMissionGame));
             this.GameScore = new System.Windows.Forms.Label();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
-            this.Background = new System.Windows.Forms.PictureBox();
+            this.PlatformDown4_l2 = new System.Windows.Forms.PictureBox();
+            this.PlatformDown6_l2 = new System.Windows.Forms.PictureBox();
+            this.PlatformDown5_l2 = new System.Windows.Forms.PictureBox();
+            this.PlatformUp6_l2 = new System.Windows.Forms.PictureBox();
+            this.PlatformUp5_l2 = new System.Windows.Forms.PictureBox();
+            this.PlatformUp4_l2 = new System.Windows.Forms.PictureBox();
+            this.PlatformUp3_l2 = new System.Windows.Forms.PictureBox();
+            this.PlatformUp1_l2 = new System.Windows.Forms.PictureBox();
+            this.PlatformUp2_l2 = new System.Windows.Forms.PictureBox();
+            this.PlatformDown1_l2 = new System.Windows.Forms.PictureBox();
+            this.PlatformDown3_l2 = new System.Windows.Forms.PictureBox();
+            this.PlatformDown2_l2 = new System.Windows.Forms.PictureBox();
+            this.Ship = new System.Windows.Forms.PictureBox();
+            this.PlatformDown4 = new System.Windows.Forms.PictureBox();
+            this.PlatformDown6 = new System.Windows.Forms.PictureBox();
+            this.PlatformDown5 = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
-            this.Key1 = new System.Windows.Forms.PictureBox();
+            this.Gas = new System.Windows.Forms.PictureBox();
             this.PlatformUp6 = new System.Windows.Forms.PictureBox();
             this.PlatformUp5 = new System.Windows.Forms.PictureBox();
             this.PlatformUp4 = new System.Windows.Forms.PictureBox();
-            this.Door = new System.Windows.Forms.PictureBox();
+            this.DoorL1 = new System.Windows.Forms.PictureBox();
             this.Coin7 = new System.Windows.Forms.PictureBox();
             this.Coin6 = new System.Windows.Forms.PictureBox();
             this.Coin1 = new System.Windows.Forms.PictureBox();
@@ -60,13 +75,31 @@ namespace Classified_Mission
             this.PlatformDown3 = new System.Windows.Forms.PictureBox();
             this.PlatformDown2 = new System.Windows.Forms.PictureBox();
             this.PlatformDown1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Background)).BeginInit();
+            this.Background = new System.Windows.Forms.PictureBox();
+            this.DoorL2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown4_l2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown6_l2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown5_l2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformUp6_l2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformUp5_l2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformUp4_l2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformUp3_l2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformUp1_l2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformUp2_l2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown1_l2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown3_l2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown2_l2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ship)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Key1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Gas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlatformUp6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlatformUp5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlatformUp4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Door)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DoorL1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Coin7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Coin6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Coin1)).BeginInit();
@@ -88,6 +121,9 @@ namespace Classified_Mission
             ((System.ComponentModel.ISupportInitialize)(this.PlatformDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlatformDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlatformDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Background)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DoorL2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // GameScore
@@ -110,35 +146,194 @@ namespace Classified_Mission
             this.GameTimer.Tag = "gametimer";
             this.GameTimer.Tick += new System.EventHandler(this.MainTimerEvent);
             // 
-            // Background
+            // PlatformDown4_l2
             // 
-            this.Background.Image = global::Classified_Mission.Properties.Resources.set5_background_stars_Blurred_Long;
-            this.Background.Location = new System.Drawing.Point(0, -23);
-            this.Background.Name = "Background";
-            this.Background.Size = new System.Drawing.Size(3212, 520);
-            this.Background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Background.TabIndex = 35;
-            this.Background.TabStop = false;
+            this.PlatformDown4_l2.Image = global::Classified_Mission.Properties.Resources.tileBlue_04;
+            this.PlatformDown4_l2.Location = new System.Drawing.Point(2767, 364);
+            this.PlatformDown4_l2.Name = "PlatformDown4_l2";
+            this.PlatformDown4_l2.Size = new System.Drawing.Size(48, 50);
+            this.PlatformDown4_l2.TabIndex = 51;
+            this.PlatformDown4_l2.TabStop = false;
+            this.PlatformDown4_l2.Tag = "Platform_l2";
+            // 
+            // PlatformDown6_l2
+            // 
+            this.PlatformDown6_l2.Image = global::Classified_Mission.Properties.Resources.tileBlue_06;
+            this.PlatformDown6_l2.Location = new System.Drawing.Point(3042, 364);
+            this.PlatformDown6_l2.Name = "PlatformDown6_l2";
+            this.PlatformDown6_l2.Size = new System.Drawing.Size(64, 50);
+            this.PlatformDown6_l2.TabIndex = 50;
+            this.PlatformDown6_l2.TabStop = false;
+            this.PlatformDown6_l2.Tag = "Platform_l2";
+            this.PlatformDown6_l2.Click += new System.EventHandler(this.pictureBox6_Click_1);
+            // 
+            // PlatformDown5_l2
+            // 
+            this.PlatformDown5_l2.BackgroundImage = global::Classified_Mission.Properties.Resources.tileBlue_05;
+            this.PlatformDown5_l2.Image = global::Classified_Mission.Properties.Resources.tileBlue_05;
+            this.PlatformDown5_l2.Location = new System.Drawing.Point(2810, 364);
+            this.PlatformDown5_l2.Name = "PlatformDown5_l2";
+            this.PlatformDown5_l2.Size = new System.Drawing.Size(233, 50);
+            this.PlatformDown5_l2.TabIndex = 49;
+            this.PlatformDown5_l2.TabStop = false;
+            this.PlatformDown5_l2.Tag = "Platform_l2";
+            // 
+            // PlatformUp6_l2
+            // 
+            this.PlatformUp6_l2.Image = global::Classified_Mission.Properties.Resources.tileBlue_16;
+            this.PlatformUp6_l2.Location = new System.Drawing.Point(755, 295);
+            this.PlatformUp6_l2.Name = "PlatformUp6_l2";
+            this.PlatformUp6_l2.Size = new System.Drawing.Size(77, 50);
+            this.PlatformUp6_l2.TabIndex = 48;
+            this.PlatformUp6_l2.TabStop = false;
+            this.PlatformUp6_l2.Tag = "Platform_l2";
+            // 
+            // PlatformUp5_l2
+            // 
+            this.PlatformUp5_l2.Image = global::Classified_Mission.Properties.Resources.tileBlue_05;
+            this.PlatformUp5_l2.Location = new System.Drawing.Point(692, 295);
+            this.PlatformUp5_l2.Name = "PlatformUp5_l2";
+            this.PlatformUp5_l2.Size = new System.Drawing.Size(64, 50);
+            this.PlatformUp5_l2.TabIndex = 47;
+            this.PlatformUp5_l2.TabStop = false;
+            this.PlatformUp5_l2.Tag = "Platform_l2";
+            // 
+            // PlatformUp4_l2
+            // 
+            this.PlatformUp4_l2.Image = global::Classified_Mission.Properties.Resources.tileBlue_15;
+            this.PlatformUp4_l2.Location = new System.Drawing.Point(631, 295);
+            this.PlatformUp4_l2.Name = "PlatformUp4_l2";
+            this.PlatformUp4_l2.Size = new System.Drawing.Size(62, 50);
+            this.PlatformUp4_l2.TabIndex = 46;
+            this.PlatformUp4_l2.TabStop = false;
+            this.PlatformUp4_l2.Tag = "Platform_l2";
+            // 
+            // PlatformUp3_l2
+            // 
+            this.PlatformUp3_l2.AccessibleName = "test";
+            this.PlatformUp3_l2.Image = global::Classified_Mission.Properties.Resources.tileBlue_25;
+            this.PlatformUp3_l2.Location = new System.Drawing.Point(143, 238);
+            this.PlatformUp3_l2.Name = "PlatformUp3_l2";
+            this.PlatformUp3_l2.Size = new System.Drawing.Size(69, 50);
+            this.PlatformUp3_l2.TabIndex = 45;
+            this.PlatformUp3_l2.TabStop = false;
+            this.PlatformUp3_l2.Tag = "Platform_l2";
+            // 
+            // PlatformUp1_l2
+            // 
+            this.PlatformUp1_l2.AccessibleName = "test";
+            this.PlatformUp1_l2.Image = global::Classified_Mission.Properties.Resources.tileBlue_24;
+            this.PlatformUp1_l2.Location = new System.Drawing.Point(19, 238);
+            this.PlatformUp1_l2.Name = "PlatformUp1_l2";
+            this.PlatformUp1_l2.Size = new System.Drawing.Size(63, 50);
+            this.PlatformUp1_l2.TabIndex = 44;
+            this.PlatformUp1_l2.TabStop = false;
+            this.PlatformUp1_l2.Tag = "Platform_l2";
+            // 
+            // PlatformUp2_l2
+            // 
+            this.PlatformUp2_l2.AccessibleName = "test";
+            this.PlatformUp2_l2.Image = global::Classified_Mission.Properties.Resources.tileBlue_05;
+            this.PlatformUp2_l2.Location = new System.Drawing.Point(81, 238);
+            this.PlatformUp2_l2.Name = "PlatformUp2_l2";
+            this.PlatformUp2_l2.Size = new System.Drawing.Size(63, 50);
+            this.PlatformUp2_l2.TabIndex = 43;
+            this.PlatformUp2_l2.TabStop = false;
+            this.PlatformUp2_l2.Tag = "Platform_l2";
+            // 
+            // PlatformDown1_l2
+            // 
+            this.PlatformDown1_l2.Image = global::Classified_Mission.Properties.Resources.tileBlue_04;
+            this.PlatformDown1_l2.Location = new System.Drawing.Point(236, 377);
+            this.PlatformDown1_l2.Name = "PlatformDown1_l2";
+            this.PlatformDown1_l2.Size = new System.Drawing.Size(48, 50);
+            this.PlatformDown1_l2.TabIndex = 42;
+            this.PlatformDown1_l2.TabStop = false;
+            this.PlatformDown1_l2.Tag = "Platform_l2";
+            // 
+            // PlatformDown3_l2
+            // 
+            this.PlatformDown3_l2.Image = global::Classified_Mission.Properties.Resources.tileBlue_06;
+            this.PlatformDown3_l2.Location = new System.Drawing.Point(511, 377);
+            this.PlatformDown3_l2.Name = "PlatformDown3_l2";
+            this.PlatformDown3_l2.Size = new System.Drawing.Size(64, 50);
+            this.PlatformDown3_l2.TabIndex = 41;
+            this.PlatformDown3_l2.TabStop = false;
+            this.PlatformDown3_l2.Tag = "Platform_l2";
+            // 
+            // PlatformDown2_l2
+            // 
+            this.PlatformDown2_l2.BackgroundImage = global::Classified_Mission.Properties.Resources.tileBlue_05;
+            this.PlatformDown2_l2.Image = global::Classified_Mission.Properties.Resources.tileBlue_05;
+            this.PlatformDown2_l2.Location = new System.Drawing.Point(279, 377);
+            this.PlatformDown2_l2.Name = "PlatformDown2_l2";
+            this.PlatformDown2_l2.Size = new System.Drawing.Size(233, 50);
+            this.PlatformDown2_l2.TabIndex = 40;
+            this.PlatformDown2_l2.TabStop = false;
+            this.PlatformDown2_l2.Tag = "Platform_l2";
+            // 
+            // Ship
+            // 
+            this.Ship.Image = global::Classified_Mission.Properties.Resources.spaceShips_0082;
+            this.Ship.Location = new System.Drawing.Point(2901, 327);
+            this.Ship.Name = "Ship";
+            this.Ship.Size = new System.Drawing.Size(62, 56);
+            this.Ship.TabIndex = 39;
+            this.Ship.TabStop = false;
+            // 
+            // PlatformDown4
+            // 
+            this.PlatformDown4.Image = global::Classified_Mission.Properties.Resources.tileBlue_04;
+            this.PlatformDown4.Location = new System.Drawing.Point(2767, 383);
+            this.PlatformDown4.Name = "PlatformDown4";
+            this.PlatformDown4.Size = new System.Drawing.Size(48, 50);
+            this.PlatformDown4.TabIndex = 38;
+            this.PlatformDown4.TabStop = false;
+            this.PlatformDown4.Tag = "Platform";
+            this.PlatformDown4.Click += new System.EventHandler(this.PlatformDown4_Click);
+            // 
+            // PlatformDown6
+            // 
+            this.PlatformDown6.Image = global::Classified_Mission.Properties.Resources.tileBlue_06;
+            this.PlatformDown6.Location = new System.Drawing.Point(3042, 383);
+            this.PlatformDown6.Name = "PlatformDown6";
+            this.PlatformDown6.Size = new System.Drawing.Size(64, 50);
+            this.PlatformDown6.TabIndex = 37;
+            this.PlatformDown6.TabStop = false;
+            this.PlatformDown6.Tag = "Platform";
+            this.PlatformDown6.Click += new System.EventHandler(this.PlatformDown6_Click);
+            // 
+            // PlatformDown5
+            // 
+            this.PlatformDown5.BackgroundImage = global::Classified_Mission.Properties.Resources.tileBlue_05;
+            this.PlatformDown5.Image = global::Classified_Mission.Properties.Resources.tileBlue_05;
+            this.PlatformDown5.Location = new System.Drawing.Point(2810, 383);
+            this.PlatformDown5.Name = "PlatformDown5";
+            this.PlatformDown5.Size = new System.Drawing.Size(233, 50);
+            this.PlatformDown5.TabIndex = 36;
+            this.PlatformDown5.TabStop = false;
+            this.PlatformDown5.Tag = "Platform";
+            this.PlatformDown5.Click += new System.EventHandler(this.PlatformDown5_Click);
             // 
             // Player
             // 
-            this.Player.Image = global::Classified_Mission.Properties.Resources.p1_stand1;
-            this.Player.Location = new System.Drawing.Point(266, 332);
+            this.Player.Image = global::Classified_Mission.Properties.Resources.lockGreenTop;
+            this.Player.Location = new System.Drawing.Point(245, 342);
             this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(41, 48);
+            this.Player.Size = new System.Drawing.Size(64, 56);
             this.Player.TabIndex = 33;
             this.Player.TabStop = false;
             this.Player.Tag = "player";
             // 
-            // Key1
+            // Gas
             // 
-            this.Key1.Image = global::Classified_Mission.Properties.Resources.keyRed;
-            this.Key1.Location = new System.Drawing.Point(330, 342);
-            this.Key1.Name = "Key1";
-            this.Key1.Size = new System.Drawing.Size(34, 38);
-            this.Key1.TabIndex = 32;
-            this.Key1.TabStop = false;
-            this.Key1.Tag = "key1";
+            this.Gas.Image = global::Classified_Mission.Properties.Resources.switchGreen_off;
+            this.Gas.Location = new System.Drawing.Point(327, 333);
+            this.Gas.Name = "Gas";
+            this.Gas.Size = new System.Drawing.Size(26, 38);
+            this.Gas.TabIndex = 32;
+            this.Gas.TabStop = false;
+            this.Gas.Tag = "key1";
             // 
             // PlatformUp6
             // 
@@ -170,15 +365,15 @@ namespace Classified_Mission
             this.PlatformUp4.TabStop = false;
             this.PlatformUp4.Tag = "Platform";
             // 
-            // Door
+            // DoorL1
             // 
-            this.Door.Image = global::Classified_Mission.Properties.Resources.platformPack_tile048;
-            this.Door.Location = new System.Drawing.Point(79, 207);
-            this.Door.Name = "Door";
-            this.Door.Size = new System.Drawing.Size(65, 50);
-            this.Door.TabIndex = 28;
-            this.Door.TabStop = false;
-            this.Door.Tag = "door1";
+            this.DoorL1.Image = global::Classified_Mission.Properties.Resources.platformPack_tile048;
+            this.DoorL1.Location = new System.Drawing.Point(79, 207);
+            this.DoorL1.Name = "DoorL1";
+            this.DoorL1.Size = new System.Drawing.Size(65, 50);
+            this.DoorL1.TabIndex = 28;
+            this.DoorL1.TabStop = false;
+            this.DoorL1.Tag = "door1_l1";
             // 
             // Coin7
             // 
@@ -213,7 +408,7 @@ namespace Classified_Mission
             // Coin2
             // 
             this.Coin2.Image = global::Classified_Mission.Properties.Resources.coin4;
-            this.Coin2.Location = new System.Drawing.Point(412, 355);
+            this.Coin2.Location = new System.Drawing.Point(1202, 503);
             this.Coin2.Name = "Coin2";
             this.Coin2.Size = new System.Drawing.Size(27, 25);
             this.Coin2.TabIndex = 27;
@@ -396,18 +591,66 @@ namespace Classified_Mission
             this.PlatformDown1.Tag = "Platform";
             this.PlatformDown1.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
+            // Background
+            // 
+            this.Background.Image = global::Classified_Mission.Properties.Resources.set5_background_stars_Blurred_Long;
+            this.Background.Location = new System.Drawing.Point(0, -23);
+            this.Background.Name = "Background";
+            this.Background.Size = new System.Drawing.Size(3212, 520);
+            this.Background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Background.TabIndex = 35;
+            this.Background.TabStop = false;
+            // 
+            // DoorL2
+            // 
+            this.DoorL2.Image = global::Classified_Mission.Properties.Resources.platformPack_tile048;
+            this.DoorL2.Location = new System.Drawing.Point(79, 201);
+            this.DoorL2.Name = "DoorL2";
+            this.DoorL2.Size = new System.Drawing.Size(65, 50);
+            this.DoorL2.TabIndex = 52;
+            this.DoorL2.TabStop = false;
+            this.DoorL2.Tag = "doorl2";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Classified_Mission.Properties.Resources.spaceShips_0082;
+            this.pictureBox1.Location = new System.Drawing.Point(2901, 327);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 56);
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "shipl2";
+            // 
             // ClassifiedMissionGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 481);
+            this.ClientSize = new System.Drawing.Size(3144, 481);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.DoorL2);
+            this.Controls.Add(this.PlatformDown4_l2);
+            this.Controls.Add(this.PlatformDown6_l2);
+            this.Controls.Add(this.PlatformDown5_l2);
+            this.Controls.Add(this.PlatformUp6_l2);
+            this.Controls.Add(this.PlatformUp5_l2);
+            this.Controls.Add(this.PlatformUp4_l2);
+            this.Controls.Add(this.PlatformUp3_l2);
+            this.Controls.Add(this.PlatformUp1_l2);
+            this.Controls.Add(this.PlatformUp2_l2);
+            this.Controls.Add(this.PlatformDown1_l2);
+            this.Controls.Add(this.PlatformDown3_l2);
+            this.Controls.Add(this.PlatformDown2_l2);
+            this.Controls.Add(this.Ship);
+            this.Controls.Add(this.PlatformDown4);
+            this.Controls.Add(this.PlatformDown6);
+            this.Controls.Add(this.PlatformDown5);
             this.Controls.Add(this.GameScore);
             this.Controls.Add(this.Player);
-            this.Controls.Add(this.Key1);
+            this.Controls.Add(this.Gas);
             this.Controls.Add(this.PlatformUp6);
             this.Controls.Add(this.PlatformUp5);
             this.Controls.Add(this.PlatformUp4);
-            this.Controls.Add(this.Door);
+            this.Controls.Add(this.DoorL1);
             this.Controls.Add(this.Coin7);
             this.Controls.Add(this.Coin6);
             this.Controls.Add(this.Coin1);
@@ -437,13 +680,28 @@ namespace Classified_Mission
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
-            ((System.ComponentModel.ISupportInitialize)(this.Background)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown4_l2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown6_l2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown5_l2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformUp6_l2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformUp5_l2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformUp4_l2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformUp3_l2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformUp1_l2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformUp2_l2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown1_l2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown3_l2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown2_l2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ship)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlatformDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Key1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Gas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlatformUp6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlatformUp5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlatformUp4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Door)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DoorL1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Coin7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Coin6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Coin1)).EndInit();
@@ -465,6 +723,9 @@ namespace Classified_Mission
             ((System.ComponentModel.ISupportInitialize)(this.PlatformDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlatformDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlatformDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Background)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DoorL2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,15 +753,33 @@ namespace Classified_Mission
 		private System.Windows.Forms.PictureBox Coin1;
 		private System.Windows.Forms.PictureBox Coin6;
 		private System.Windows.Forms.PictureBox Coin7;
-		private System.Windows.Forms.PictureBox Door;
+		private System.Windows.Forms.PictureBox DoorL1;
 		private System.Windows.Forms.PictureBox PlatformUp4;
 		private System.Windows.Forms.PictureBox PlatformUp5;
 		private System.Windows.Forms.PictureBox PlatformUp6;
-        private System.Windows.Forms.PictureBox Key1;
+        private System.Windows.Forms.PictureBox Gas;
         private System.Windows.Forms.PictureBox Player;
         private System.Windows.Forms.Label GameScore;
         private System.Windows.Forms.Timer GameTimer;
         private System.Windows.Forms.PictureBox Background;
+        private System.Windows.Forms.PictureBox PlatformDown4;
+        private System.Windows.Forms.PictureBox PlatformDown6;
+        private System.Windows.Forms.PictureBox PlatformDown5;
+        private System.Windows.Forms.PictureBox Ship;
+        private System.Windows.Forms.PictureBox PlatformDown1_l2;
+        private System.Windows.Forms.PictureBox PlatformDown3_l2;
+        private System.Windows.Forms.PictureBox PlatformDown2_l2;
+        private System.Windows.Forms.PictureBox PlatformUp3_l2;
+        private System.Windows.Forms.PictureBox PlatformUp1_l2;
+        private System.Windows.Forms.PictureBox PlatformUp2_l2;
+        private System.Windows.Forms.PictureBox PlatformUp6_l2;
+        private System.Windows.Forms.PictureBox PlatformUp5_l2;
+        private System.Windows.Forms.PictureBox PlatformUp4_l2;
+        private System.Windows.Forms.PictureBox PlatformDown4_l2;
+        private System.Windows.Forms.PictureBox PlatformDown6_l2;
+        private System.Windows.Forms.PictureBox PlatformDown5_l2;
+        private System.Windows.Forms.PictureBox DoorL2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

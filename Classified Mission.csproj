@@ -704,5 +704,26 @@
   <ItemGroup>
     <None Include="Resources\set5_background_stars_Blurred_Long.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lockGreenTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lockRedTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switchGreen_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceShips_008_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceShips_0081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceShips_0082.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceBuilding_025.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

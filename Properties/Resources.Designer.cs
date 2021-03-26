@@ -193,6 +193,26 @@ namespace Classified_Mission.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lockGreenTop {
+            get {
+                object obj = ResourceManager.GetObject("lockGreenTop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lockRedTop {
+            get {
+                object obj = ResourceManager.GetObject("lockRedTop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mars {
             get {
                 object obj = ResourceManager.GetObject("Mars", resourceCulture);
@@ -813,6 +833,16 @@ namespace Classified_Mission.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap spaceBuilding_025 {
+            get {
+                object obj = ResourceManager.GetObject("spaceBuilding_025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap spaceMeteors_004 {
             get {
                 object obj = ResourceManager.GetObject("spaceMeteors_004", resourceCulture);
@@ -1003,6 +1033,36 @@ namespace Classified_Mission.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap spaceShips_008_small {
+            get {
+                object obj = ResourceManager.GetObject("spaceShips_008_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spaceShips_0081 {
+            get {
+                object obj = ResourceManager.GetObject("spaceShips_0081", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spaceShips_0082 {
+            get {
+                object obj = ResourceManager.GetObject("spaceShips_0082", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sun {
             get {
                 object obj = ResourceManager.GetObject("Sun", resourceCulture);
@@ -1016,6 +1076,16 @@ namespace Classified_Mission.Properties {
         internal static System.Drawing.Bitmap Sun1 {
             get {
                 object obj = ResourceManager.GetObject("Sun1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap switchGreen_off {
+            get {
+                object obj = ResourceManager.GetObject("switchGreen_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
