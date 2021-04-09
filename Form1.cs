@@ -2,188 +2,134 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using System.IO;
 
 namespace Classified_Mission
 {
+
     public partial class ClassifiedMissionGame : Form
     {
 
-
-		bool goLeft, goRight, jumping, hasGas;
-
-		int jumpSpeed = 10;
-		int force = 8;
-		int score = 0;
-
-		int playerSpeed = 10;
-		int backgroundSpeed = 10;
-
-        public ClassifiedMissionGame()
-        {
-            InitializeComponent();
-
-			//This will mount the item to the backgeound to make it transparent
-
-			//Platforms
-			Background.Controls.Add(PlatformDown1);
-			Background.Controls.Add(PlatformDown2);
-			Background.Controls.Add(PlatformDown3);
-			Background.Controls.Add(PlatformDown4);
-			Background.Controls.Add(PlatformDown5);
-			Background.Controls.Add(PlatformDown6);
-			Background.Controls.Add(PlatformUp1);
-			Background.Controls.Add(PlatformUp2);
-			Background.Controls.Add(PlatformUp3);
-			Background.Controls.Add(PlatformUp4);
-			Background.Controls.Add(PlatformUp5);
-			Background.Controls.Add(PlatformUp6);
-
-
-
-			//Planets
-			Background.Controls.Add(Sun);
-			Background.Controls.Add(Earth);
-			Background.Controls.Add(Moon);
-			Background.Controls.Add(Mars);
-			Background.Controls.Add(Jupitar);
-			Background.Controls.Add(Saturn);
-			Background.Controls.Add(Neptune);
-			Background.Controls.Add(Uranus);
-
-			//Coins
-			//Background.Controls.Add(Coin1);
-			Background.Controls.Add(Coin2);
-			Background.Controls.Add(Coin3);
-			Background.Controls.Add(Coin4);
-			Background.Controls.Add(Coin5);
-			Background.Controls.Add(Coin6);
-			Background.Controls.Add(Coin7);
-
-
-			//Other Objects
-			Background.Controls.Add(DoorL1);
-			Background.Controls.Add(Ship); 
-			//Background.Controls.Add(Key1);
-			//Background.Controls.Add(Player);
-
-
-
-			//This will place the objects and change the color of the background to transparent relatively to the parent background it is located in
-
-			//Platforms
-			PlatformDown1.BackColor = Color.Transparent;
-			PlatformDown1.Location = new Point(283, 399);
-			PlatformDown2.BackColor = Color.Transparent;
-			PlatformDown2.Location = new Point(516, 399);
-			PlatformDown3.BackColor = Color.Transparent;
-			PlatformDown3.Location = new Point(240, 399);
-			PlatformDown4.BackColor = Color.Transparent;
-			PlatformDown4.Location = new Point(2767, 383);
-			PlatformDown5.BackColor = Color.Transparent;
-			PlatformDown5.Location = new Point(2810, 383);
-			PlatformDown6.BackColor = Color.Transparent;
-			PlatformDown6.Location = new Point(3043, 383);
-			PlatformUp1.BackColor = Color.Transparent;
-			PlatformUp1.Location = new Point(17, 256);
-			PlatformUp2.BackColor = Color.Transparent;
-			PlatformUp2.Location = new Point(80, 256);
-			PlatformUp3.BackColor = Color.Transparent;
-			PlatformUp3.Location = new Point(143, 256);
-			PlatformUp4.BackColor = Color.Transparent;
-			PlatformUp4.Location = new Point(631, 314);
-			PlatformUp5.BackColor = Color.Transparent;
-			PlatformUp5.Location = new Point(693, 314);
-			PlatformUp6.BackColor = Color.Transparent;
-			PlatformUp6.Location = new Point(736, 314);
-
-			//Planets
-			Sun.BackColor = Color.Transparent;
-			Sun.Location = new Point(254, 81);
-			Earth.BackColor = Color.Transparent;
-			Earth.Location = new Point(794, 203);
-			Moon.BackColor = Color.Transparent;
-			Moon.Location = new Point(847, 227);
-			Mars.BackColor = Color.Transparent;
-			Mars.Location = new Point(1258, 282);
-			Jupitar.BackColor = Color.Transparent;
-			Jupitar.Location = new Point(1623, 46);
-			Saturn.BackColor = Color.Transparent;
-			Saturn.Location = new Point(2030, 203);
-			Neptune.BackColor = Color.Transparent;
-			Neptune.Location = new Point(2619, 155);
-			Uranus.BackColor = Color.Transparent;
-			Uranus.Location = new Point(3050, 46);
-
-			//Coins
-			Coin1.BackColor = Color.Transparent;
-			Coin1.Location = new Point(379, 355);
-			Coin2.BackColor = Color.Transparent;
-			Coin2.Location = new Point(412, 355);
-			Coin3.BackColor = Color.Transparent;
-			Coin3.Location = new Point(445, 355);
-			Coin4.BackColor = Color.Transparent;
-			Coin4.Location = new Point(478, 355);
-			Coin5.BackColor = Color.Transparent;
-			Coin5.Location = new Point(511, 355);
-			Coin6.BackColor = Color.Transparent;
-			Coin6.Location = new Point(427, 324);
-			Coin7.BackColor = Color.Transparent;
-			Coin7.Location = new Point(460, 324);
-
-			//Other Objects
-			DoorL1.BackColor = Color.Transparent;
-			DoorL1.Location = new Point(79, 207);
-			Gas.BackColor = Color.Transparent;
-			Gas.Location = new Point(708, 275);
-			Ship.BackColor = Color.Transparent;
-			Ship.Location = new Point(2901, 329);
-
-			//Player.BackColor = Color.Transparent;
-			//Player.Location = new Point(254, 355);
-
-		}
-
-		private void pictureBox1_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void Form1_Load(object sender, EventArgs e)
 		{
+			ReadHighScore();
 
 		}
 
-		private void pictureBox2_Click(object sender, EventArgs e)
-		{
 
-		}
+		bool goLeft, goRight, jumping, isGameOver, hasGas;
 
-		private void pictureBox6_Click(object sender, EventArgs e)
-		{
+		int jumpSpeed = 4;
+		int force = 1;
+		int score = 0;
+		//int gamehighscore = 0;
+
+		// Speeds
+		int playerSpeed = 10;
+		int backgroundSpeed = 35;
+
+		// Health
+		int playerhealth = 100;
+
+
+		Random randNum = new Random();
+
+		// Enemies
+		int enemy1Speed = 1;
+		int enemy2Speed = 1;
+		int enemy3Speed = 1;
+		int enemy4Speed = 1;
+		int enemy5Speed = 1;
+
+		//Collectables
+		int medkit = 0;
+		int shield = 0;
+		int speed = 0;
+
+
+
+
+		public ClassifiedMissionGame()
+        {
 			
+			InitializeComponent();
+			
+
+
+			SoundPlayer splayer = new SoundPlayer(System.Environment.CurrentDirectory + "//SpaceCadetLow.wav");
+			splayer.PlayLooping();
+
+
+
+			//Player & enemy positions
+			Player.Left = 88;
+			Player.Top = 207;
+			///
+			enemy1.Left = 464;
+			enemy1.Top = 330;
+			enemy2.Left = 1629;
+			enemy2.Top = 354;
+			enemy3.Left = 2063;
+			enemy3.Top = 267;
+			///
+
+			// Text objects
+			floatingtext.Left = 907;
+			floatingtext.Top = 178;
+
+			// Other objects
+			DoorL2.Left = 79;
+			DoorL2.Top = 197;
 		}
 
-		private void pictureBox3_Click(object sender, EventArgs e)
+		// Highscore properties
+
+		private void ReadHighScore() 
+		{
+			// Generates a new txt file for the highscore if it doesn't exist already
+
+			if (!File.Exists("classifiedhighscore.txt")) 
+			{
+
+				TextWriter htw = new StreamWriter("classifiedhighscore.txt");
+				htw.Write("0");
+				htw.Close();
+			}
+
+			// Opens up the created txt file and reads it to put into its own variable
+
+			TextReader htr = new StreamReader("classifiedhighscore.txt");
+
+			highscore.Text = htr.ReadLine();
+			htr.Close();
+		}
+
+		public void WriteHighScore() 
 		{
 
+			// Creates a writer and saves the file (Overwrites the highscore if score is equal or greater than the actual score)
+
+			if (score >= Convert.ToInt32(highscore.Text)) 
+			{
+
+				TextWriter htw = new StreamWriter("classifiedhighscore.txt");
+				htw.WriteLine(score);
+				htw.Close();
+			
+			
+			}
 		}
+
+
 
 		private void Back1_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pictureBox2_Click_1(object sender, EventArgs e)
-		{
-
-		}
-
-		private void PlatformDown2_Click(object sender, EventArgs e)
 		{
 
 		}
@@ -193,10 +139,45 @@ namespace Classified_Mission
 
 		}
 
+		public void GameOver() 
+		{
+
+
+
+			SoundPlayer splayer = new SoundPlayer(System.Environment.CurrentDirectory + "//fall.wav");
+			splayer.Play();
+			GameTimer.Stop();
+			DialogBox gameover = new DialogBox();
+			gameover.Show();
+			isGameOver = true;
+
+
+		}
+
+		public void UpdateHighScore() 
+		{
+
+			WriteHighScore();
+			ReadHighScore();
+
+
+		}
+
 		private void MainTimerEvent(object sender, EventArgs e)
 		{
+
+
+
+
 			GameScore.Text = "Score: " + score;
+			//highscore.Text = "High Score: " + gamehighscore;
+			medkitcollected.Text = "Medkits: " + medkit;
+			shieldcollected.Text = "Shields: " + shield;
+			speedcollected.Text = "Speed: " + speed;
 			Player.Top += jumpSpeed;
+
+
+
 
 			if (goLeft == true && Player.Left > 3) 
 			{
@@ -214,7 +195,7 @@ namespace Classified_Mission
 				MoveGameElements("forward");
 			}
 
-			if (goRight == true && Background.Left > -2409) 
+			if (goRight == true && Background.Left > -2200) 
 			{
 				Background.Left -= backgroundSpeed;
 				MoveGameElements("backward");
@@ -237,47 +218,17 @@ namespace Classified_Mission
 
 			foreach (Control x in this.Controls)
 			{
-				string LockGreenTop = PictureBox.picture;
-				switch (LockGreenTop)
-				{
-
-					case (Player.Bounds.IntersectsWith(Ship.Bounds) && hasGas == true):
-						UpdatePictureBox(@"[Images1 Path]");
-						break;
-
-				}
-
-
-				if (x is PictureBox && (string)x.Tag == "player")
-				{ 
 				
-
-
-				}
-
-				if (x is PictureBox && (string)x.Tag == "doorl2")
-				{
-					x.Visible = false;
-				}
-				if (x is PictureBox && (string)x.Tag == "shipl2")
-				{
-					x.Visible = false;
-				}
 
 				if (x is PictureBox && (string)x.Tag == "Platform_l2") 
 				{
-
-					if (x is PictureBox && (string)x.Tag == "Platform_l2" ) 
-					{
-						x.Visible = false;
-					}
 
 
 					if (Player.Bounds.IntersectsWith(x.Bounds) && jumping == false) 
 					
 					{
 
-						force = 8;
+						force = 6;
 						Player.Top = x.Top - Player.Height;
 						jumpSpeed = 0;
 					
@@ -295,13 +246,67 @@ namespace Classified_Mission
 					{
 
 						x.Visible = false;
+						//SoundPlayer splayer1 = new SoundPlayer(System.Environment.CurrentDirectory + "//coincollect.wav");
+						//splayer1.Play();
+
 						score += 1;
+
+						UpdateHighScore();
+
 
 					}
 				
 				}
+
+				if ((string)x.Tag == "enemy") 
+				{
+
+					if (Player.Bounds.IntersectsWith(x.Bounds)) 
+					{
+
+						GameOver();
+
+					}
+
+				}
+
+
+				// Enemy Movements
+
+				enemy1.Left -= enemy1Speed;
+
+				if (enemy1.Left < PlatformDown2_l2.Left || enemy1.Left + enemy1.Width > PlatformDown2_l2.Left + PlatformDown2_l2.Width) 
+				{
+
+					enemy1Speed = -enemy1Speed;
+
+
+				}
+
+				enemy2.Left += enemy2Speed;
+
+				if (enemy2.Left < PlatformDown11_l2.Left || enemy2.Left + enemy2.Width > PlatformDown11_l2.Left + PlatformDown11_l2.Width)
+				{
+
+					enemy2Speed = -enemy2Speed;
+
+
+				}
+
+				enemy3.Left -= enemy3Speed;
+
+				if (enemy3.Left < PlatformDown14_l2.Left || enemy3.Left + enemy3.Width > PlatformDown14_l2.Left + PlatformDown14_l2.Width)
+				{
+
+					enemy3Speed = -enemy3Speed;
+
+
+				}
+
+
 			}
 
+			// Gas collecting
 			if (Player.Bounds.IntersectsWith(Gas.Bounds)) 
 			{
 
@@ -310,32 +315,43 @@ namespace Classified_Mission
 
 			}
 
-			if (Player.Bounds.IntersectsWith(Ship.Bounds) && hasGas == true)
+			if (Player.Bounds.IntersectsWith(Ship1.Bounds) && hasGas == true)
 			{
 
 
 				Player.Visible = false;
 				GameTimer.Stop();
 				MessageBox.Show("Well done, you made it to the ship with a full gas tank!" + Environment.NewLine + Environment.NewLine + "You wanna play again?");
-				Ship.Visible = false;
+				Ship1.Visible = false;
 				RestartGame();
 
 			}
-			else if (Player.Bounds.IntersectsWith(Ship.Bounds) && hasGas == false)
+			else if (Player.Bounds.IntersectsWith(Ship1.Bounds) && hasGas == false)
 			{
-
+				
 				MessageBox.Show("You will need gas to power on the ship!" + Environment.NewLine + Environment.NewLine + "Go back and get the gas ffs!!!");
+				
 
 			}
 
 			if (Player.Top + Player.Height > this.ClientSize.Height) 
 			{
+				GameOver();
+			}
 
-				GameTimer.Stop();
-				MessageBox.Show("You fell into the void which means you died, you should've known that before doing it!" + Environment.NewLine + Environment.NewLine + "I don't normally give second chances, but do you wanna try again?");
-				RestartGame();
+			// Health section
+			if (playerhealth > 1)
+			{
+				healthbar.Value = playerhealth;
 
 			}
+			else
+			{
+				isGameOver = true;
+			}
+
+			//
+
 		}
 
 		
@@ -355,6 +371,7 @@ namespace Classified_Mission
 			{
 				jumping = true;
 			}
+
 		}
 
 		private void KeyIsUp(object sender, KeyEventArgs e)
@@ -371,39 +388,145 @@ namespace Classified_Mission
 			{
 				jumping = false;
 			}
-		}
+			if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.P)
+			{
+				//PauseGame();
+			}
+			if (e.KeyCode == Keys.C && medkit > 0) 
+			{
+				medkit--;
+				//UseMedkit();
 
-		private void pictureBox6_Click_1(object sender, EventArgs e)
-		{
+				if (medkit < 1)
+				{
 
-		}
+					MedkitC();
+				
+				}
+				
+			
+			}
+			if (e.KeyCode == Keys.V && shield > 0)
+			{
+				shield--;
+				//UseShield();
 
-		private void PlatformDown4_Click(object sender, EventArgs e)
-		{
+				if (shield < 1)
+				{
 
-		}
+					ShieldC();
 
-		private void PlatformDown5_Click(object sender, EventArgs e)
-		{
+				}
+				
 
-		}
+			}
+			if (e.KeyCode == Keys.B && speed > 0)
+			{
+				speed--;
+				//UseSpeed();
 
-		private void PlatformDown6_Click(object sender, EventArgs e)
-		{
+				if (speed < 1)
+				{
 
+					SpeedC();
+
+				}
+				
+
+			}
 		}
 
 		private void CloseGame(object sender, FormClosedEventArgs e)
 		{
+			WriteHighScore();
 			Application.Exit();
 		}
 
-		private void RestartGame() 
+
+		internal static void RestartGame()
+		{
+			try
+			{
+				Process.Start(System.Environment.CurrentDirectory + "//Classified Mission.exe");
+				Process.GetCurrentProcess().Kill();
+			}
+			catch (Exception EX)
+			{
+
+				MessageBox.Show("Uh oh, something happened!" + EX);
+			}
+
+					//Background theme
+					SoundPlayer splayer = new SoundPlayer(System.Environment.CurrentDirectory + "//SpaceCadetLow.wav");
+					splayer.PlayLooping();
+
+
+		}
+
+		internal static void CloseGame()
+		{
+			try
+			{
+				Process.GetCurrentProcess().Kill();
+			}
+			catch(Exception EX) {
+
+				MessageBox.Show("Uh oh, something happened!" + EX);
+
+			}
+		}
+
+
+		//Collectables
+
+		private void MedkitC() 
 		{
 
-			ClassifiedMissionGame newWindow = new ClassifiedMissionGame();
-			newWindow.Show();
-			this.Hide();
+			PictureBox medkit = new PictureBox();
+			medkit.Image = Properties.Resources.Medkit1;
+			medkit.SizeMode = PictureBoxSizeMode.AutoSize;
+			medkit.BackColor = ColorTranslator.FromHtml("#131626");
+			medkit.Left = randNum.Next(10, this.ClientSize.Width - medkit.Width);
+			medkit.Top = randNum.Next(10, this.ClientSize.Height - medkit.Height);
+			medkit.Tag = "medkitcollecttag";
+			medkit.Name = "medkitcollect";
+			this.Controls.Add(medkit);
+			medkit.BringToFront();
+			Player.BringToFront();
+
+		}
+
+		private void ShieldC()
+		{
+
+			PictureBox shield = new PictureBox();
+			shield.Image = Properties.Resources.shield;
+			shield.SizeMode = PictureBoxSizeMode.AutoSize;
+			shield.BackColor = ColorTranslator.FromHtml("#131626");
+			shield.Left = randNum.Next(10, this.ClientSize.Width - shield.Width);
+			shield.Top = randNum.Next(10, this.ClientSize.Height - shield.Height);
+			shield.Tag = "shieldcollecttag";
+			shield.Name = "shieldcollect";
+			this.Controls.Add(shield);
+			shield.BringToFront();
+			Player.BringToFront();
+
+		}
+
+		private void SpeedC()
+		{
+
+			PictureBox speed = new PictureBox();
+			speed.Image = Properties.Resources.bolt;
+			speed.SizeMode = PictureBoxSizeMode.AutoSize;
+			speed.BackColor = ColorTranslator.FromHtml("#131626");
+			speed.Left = randNum.Next(10, this.ClientSize.Width - speed.Width);
+			speed.Top = randNum.Next(10, this.ClientSize.Height - speed.Height);
+			speed.Tag = "speedcollecttag";
+			speed.Name = "speedcollect";
+			this.Controls.Add(speed);
+			speed.BringToFront();
+			Player.BringToFront();
 
 		}
 
@@ -413,7 +536,7 @@ namespace Classified_Mission
 			foreach (Control x in this.Controls) 
 			{
 
-				if (x is PictureBox && (string)x.Tag == "Platform_l2" || x is PictureBox && (string)x.Tag == "Coin" || x is PictureBox && (string)x.Tag == "key1" || x is PictureBox && (string)x.Tag == "door1_l1") 
+				if (x is PictureBox && (string)x.Tag == "Platform_l2" || x is PictureBox && (string)x.Tag == "Coin" || x is PictureBox && (string)x.Tag == "gas" || x is PictureBox && (string)x.Tag == "Ship" || x is PictureBox && (string)x.Tag == "enemy" || x is Label && (string)x.Tag == "floating" || x is PictureBox && (string)x.Tag == "doorl2" || x is PictureBox && (string)x.Tag == "shieldcollecttag" || x is PictureBox && (string)x.Tag == "medkitcollecttag" || x is PictureBox && (string)x.Tag == "speedcollecttag" || x is PictureBox && (string)x.Tag == "spiketraps") 
 				{
 
 

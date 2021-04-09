@@ -16,7 +16,7 @@ namespace Classified_Mission
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ClassifiedMissionGame());
+            Application.Run(new MainMenu());
         }
     }
 }
