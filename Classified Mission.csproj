@@ -100,14 +100,32 @@
     <Compile Include="Level2Earth.Designer.cs">
       <DependentUpon>Level2Earth.cs</DependentUpon>
     </Compile>
+    <Compile Include="Level3Mars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level3Mars.Designer.cs">
+      <DependentUpon>Level3Mars.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pause.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pause.Designer.cs">
+      <DependentUpon>Pause.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Win.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Win.Designer.cs">
+      <DependentUpon>Win.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DialogBox.resx">
       <DependentUpon>DialogBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,8 +138,14 @@
     <EmbeddedResource Include="Level2Earth.resx">
       <DependentUpon>Level2Earth.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Level3Mars.resx">
+      <DependentUpon>Level3Mars.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pause.resx">
+      <DependentUpon>Pause.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,6 +157,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Win.resx">
+      <DependentUpon>Win.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -863,6 +890,84 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Mission Classified - No background - 250x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grassCliffLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grassCliffRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grassLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grassMid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grassRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceRockets_0012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxExplosive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxExplosiveSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Earth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Earth1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceRockets_0013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceRockets_001small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceStation_028.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceStation_025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceStation_029.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chocoCliffLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chocoCliffRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chocoLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chocoMid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chocoRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Mars.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

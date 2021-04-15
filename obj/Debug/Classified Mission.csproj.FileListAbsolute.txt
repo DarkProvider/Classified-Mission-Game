@@ -35,3 +35,6 @@ J:\Classified-Mission-Game\obj\Debug\Classified Mission.csproj.CopyComplete
 J:\Classified-Mission-Game\obj\Debug\Classified_Mission.MainMenu.resources
 J:\Classified-Mission-Game\obj\Debug\Classified_Mission.Help.resources
 J:\Classified-Mission-Game\obj\Debug\Classified_Mission.Level2Earth.resources
+J:\Classified-Mission-Game\obj\Debug\Classified_Mission.Level3Mars.resources
+J:\Classified-Mission-Game\obj\Debug\Classified_Mission.YouWin.resources
+J:\Classified-Mission-Game\obj\Debug\Classified_Mission.Pause.resources

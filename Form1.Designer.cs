@@ -39,10 +39,8 @@ namespace Classified_Mission
             this.healthbar = new System.Windows.Forms.ProgressBar();
             this.medkitcollected = new System.Windows.Forms.Label();
             this.shieldcollected = new System.Windows.Forms.Label();
-            this.speedcollected = new System.Windows.Forms.Label();
             this.highscore = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.spiketrap1 = new System.Windows.Forms.PictureBox();
             this.spiketrap2 = new System.Windows.Forms.PictureBox();
             this.spiketrap3 = new System.Windows.Forms.PictureBox();
@@ -115,7 +113,6 @@ namespace Classified_Mission
             this.Coin4 = new System.Windows.Forms.PictureBox();
             this.Coin5 = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spiketrap1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spiketrap2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spiketrap3)).BeginInit();
@@ -269,19 +266,6 @@ namespace Classified_Mission
             this.shieldcollected.Tag = "shieldcollectedtag";
             this.shieldcollected.Text = "Shields: 0";
             // 
-            // speedcollected
-            // 
-            this.speedcollected.AutoSize = true;
-            this.speedcollected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(22)))), ((int)(((byte)(38)))));
-            this.speedcollected.Font = new System.Drawing.Font("Unispace", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.speedcollected.ForeColor = System.Drawing.Color.White;
-            this.speedcollected.Location = new System.Drawing.Point(595, 3);
-            this.speedcollected.Name = "speedcollected";
-            this.speedcollected.Size = new System.Drawing.Size(80, 18);
-            this.speedcollected.TabIndex = 131;
-            this.speedcollected.Tag = "speedcollectedtag";
-            this.speedcollected.Text = "Speed: 0";
-            // 
             // highscore
             // 
             this.highscore.AutoSize = true;
@@ -307,18 +291,6 @@ namespace Classified_Mission
             this.label1.TabIndex = 133;
             this.label1.Tag = "gamehighscore";
             this.label1.Text = "Highscore: ";
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(22)))), ((int)(((byte)(38)))));
-            this.pictureBox25.Image = global::Classified_Mission.Properties.Resources.Medkit1;
-            this.pictureBox25.Location = new System.Drawing.Point(710, 261);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(30, 25);
-            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox25.TabIndex = 128;
-            this.pictureBox25.TabStop = false;
-            this.pictureBox25.Tag = "medkitcollecttag";
             // 
             // spiketrap1
             // 
@@ -1119,10 +1091,8 @@ namespace Classified_Mission
             this.ClientSize = new System.Drawing.Size(2864, 481);
             this.Controls.Add(this.highscore);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.speedcollected);
             this.Controls.Add(this.shieldcollected);
             this.Controls.Add(this.medkitcollected);
-            this.Controls.Add(this.pictureBox25);
             this.Controls.Add(this.spiketrap1);
             this.Controls.Add(this.spiketrap2);
             this.Controls.Add(this.spiketrap3);
@@ -1206,7 +1176,6 @@ namespace Classified_Mission
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spiketrap1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spiketrap2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spiketrap3)).EndInit();
@@ -1362,10 +1331,8 @@ namespace Classified_Mission
         private System.Windows.Forms.PictureBox spiketrap3;
         private System.Windows.Forms.PictureBox spiketrap2;
         private System.Windows.Forms.PictureBox spiketrap1;
-        private System.Windows.Forms.PictureBox pictureBox25;
         private System.Windows.Forms.Label medkitcollected;
         private System.Windows.Forms.Label shieldcollected;
-        private System.Windows.Forms.Label speedcollected;
         private System.Windows.Forms.Label highscore;
         private System.Windows.Forms.Label label1;
     }

@@ -92,14 +92,16 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(263, 195);
             this.label4.TabIndex = 5;
-            this.label4.Text = resources.GetString("label4.Text");
+            this.label4.Text = "Movements: \r\n\r\nSpace = Jump \r\nArrow Left | A = Go left\r\nArrow Right | D = Go Righ" +
+    "t\r\n\r\n---- ------ ------ ------ ------\r\n\r\nInteractables: \r\n\r\nC = Use Medkit\r\nV = " +
+    "Use Shield\r\nB = Use Speed Booster";
             // 
             // Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(22)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(971, 690);
+            this.ClientSize = new System.Drawing.Size(971, 696);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.okbutton);
             this.Controls.Add(this.generlainfo);

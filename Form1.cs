@@ -24,12 +24,12 @@ namespace Classified_Mission
 		}
 
 
-		bool goLeft, goRight, jumping, isGameOver, hasGas;
+		bool goLeft, goRight, isGameOver, jumping, hasGas;
 
 		int jumpSpeed = 4;
 		int force = 1;
 		int score = 0;
-		//int gamehighscore = 0;
+		int gamehighscore = 0;
 
 		// Speeds
 		int playerSpeed = 10;
@@ -45,8 +45,6 @@ namespace Classified_Mission
 		int enemy1Speed = 1;
 		int enemy2Speed = 1;
 		int enemy3Speed = 1;
-		int enemy4Speed = 1;
-		int enemy5Speed = 1;
 
 		//Collectables
 		int medkit = 0;
@@ -149,7 +147,6 @@ namespace Classified_Mission
 			GameTimer.Stop();
 			DialogBox gameover = new DialogBox();
 			gameover.Show();
-			isGameOver = true;
 
 
 		}
@@ -173,7 +170,6 @@ namespace Classified_Mission
 			//highscore.Text = "High Score: " + gamehighscore;
 			medkitcollected.Text = "Medkits: " + medkit;
 			shieldcollected.Text = "Shields: " + shield;
-			speedcollected.Text = "Speed: " + speed;
 			Player.Top += jumpSpeed;
 
 
@@ -218,6 +214,58 @@ namespace Classified_Mission
 
 			foreach (Control x in this.Controls)
 			{
+
+				if (x is PictureBox && (string)x.Tag == "medkit")
+				{
+
+					if (Player.Bounds.IntersectsWith(x.Bounds))
+					{
+
+						this.Controls.Remove(x);
+						((PictureBox)x).Dispose();
+						medkit += 1;
+						playerhealth = 100;
+
+
+					}
+
+				}
+
+				if (x is PictureBox && (string)x.Tag == "shield")
+				{
+
+					if (Player.Bounds.IntersectsWith(x.Bounds))
+					{
+
+						this.Controls.Remove(x);
+						((PictureBox)x).Dispose();
+						shield += 1;
+
+						
+
+
+					}
+
+				}
+
+				if (x is PictureBox && (string)x.Tag == "spiketraps")
+				{
+
+
+					if (Player.Bounds.IntersectsWith(x.Bounds))
+					{
+
+							playerhealth -= 20;
+
+					}
+				}
+			}
+
+			
+
+			foreach (Control x in this.Controls)
+			{
+				
 				
 
 				if (x is PictureBox && (string)x.Tag == "Platform_l2") 
@@ -320,17 +368,10 @@ namespace Classified_Mission
 
 
 				Player.Visible = false;
-				GameTimer.Stop();
-				MessageBox.Show("Well done, you made it to the ship with a full gas tank!" + Environment.NewLine + Environment.NewLine + "You wanna play again?");
 				Ship1.Visible = false;
-				RestartGame();
-
-			}
-			else if (Player.Bounds.IntersectsWith(Ship1.Bounds) && hasGas == false)
-			{
-				
-				MessageBox.Show("You will need gas to power on the ship!" + Environment.NewLine + Environment.NewLine + "Go back and get the gas ffs!!!");
-				
+				Level2Earth level2 = new Level2Earth();
+				level2.Show();
+				// Not done!!! this.Close();
 
 			}
 
@@ -348,6 +389,7 @@ namespace Classified_Mission
 			else
 			{
 				isGameOver = true;
+				GameOver();
 			}
 
 			//
@@ -371,6 +413,12 @@ namespace Classified_Mission
 			{
 				jumping = true;
 			}
+			if (isGameOver == true)
+			{
+
+				return;
+
+			}
 
 		}
 
@@ -390,12 +438,13 @@ namespace Classified_Mission
 			}
 			if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.P)
 			{
-				//PauseGame();
+				PauseGame();
 			}
 			if (e.KeyCode == Keys.C && medkit > 0) 
 			{
 				medkit--;
 				//UseMedkit();
+				playerhealth = 100;
 
 				if (medkit < 1)
 				{
@@ -410,25 +459,12 @@ namespace Classified_Mission
 			{
 				shield--;
 				//UseShield();
+				playerhealth += 200;
 
 				if (shield < 1)
 				{
 
 					ShieldC();
-
-				}
-				
-
-			}
-			if (e.KeyCode == Keys.B && speed > 0)
-			{
-				speed--;
-				//UseSpeed();
-
-				if (speed < 1)
-				{
-
-					SpeedC();
 
 				}
 				
@@ -463,7 +499,18 @@ namespace Classified_Mission
 
 		}
 
-		internal static void CloseGame()
+		public void PauseGame()
+		{
+
+			SoundPlayer splayer = new SoundPlayer(System.Environment.CurrentDirectory + "//SpaceCadetLow.wav");
+			splayer.Stop();
+
+			Pause pausemenu = new Pause();
+			pausemenu.Show();
+
+		}
+
+			internal static void CloseGame()
 		{
 			try
 			{
@@ -487,9 +534,8 @@ namespace Classified_Mission
 			medkit.SizeMode = PictureBoxSizeMode.AutoSize;
 			medkit.BackColor = ColorTranslator.FromHtml("#131626");
 			medkit.Left = randNum.Next(10, this.ClientSize.Width - medkit.Width);
-			medkit.Top = randNum.Next(10, this.ClientSize.Height - medkit.Height);
-			medkit.Tag = "medkitcollecttag";
-			medkit.Name = "medkitcollect";
+			medkit.Top = randNum.Next(30, this.ClientSize.Height - medkit.Height);
+			medkit.Tag = "medkit";
 			this.Controls.Add(medkit);
 			medkit.BringToFront();
 			Player.BringToFront();
@@ -504,28 +550,10 @@ namespace Classified_Mission
 			shield.SizeMode = PictureBoxSizeMode.AutoSize;
 			shield.BackColor = ColorTranslator.FromHtml("#131626");
 			shield.Left = randNum.Next(10, this.ClientSize.Width - shield.Width);
-			shield.Top = randNum.Next(10, this.ClientSize.Height - shield.Height);
-			shield.Tag = "shieldcollecttag";
-			shield.Name = "shieldcollect";
+			shield.Top = randNum.Next(30, this.ClientSize.Height - shield.Height);
+			shield.Tag = "shield";
 			this.Controls.Add(shield);
 			shield.BringToFront();
-			Player.BringToFront();
-
-		}
-
-		private void SpeedC()
-		{
-
-			PictureBox speed = new PictureBox();
-			speed.Image = Properties.Resources.bolt;
-			speed.SizeMode = PictureBoxSizeMode.AutoSize;
-			speed.BackColor = ColorTranslator.FromHtml("#131626");
-			speed.Left = randNum.Next(10, this.ClientSize.Width - speed.Width);
-			speed.Top = randNum.Next(10, this.ClientSize.Height - speed.Height);
-			speed.Tag = "speedcollecttag";
-			speed.Name = "speedcollect";
-			this.Controls.Add(speed);
-			speed.BringToFront();
 			Player.BringToFront();
 
 		}
@@ -536,7 +564,7 @@ namespace Classified_Mission
 			foreach (Control x in this.Controls) 
 			{
 
-				if (x is PictureBox && (string)x.Tag == "Platform_l2" || x is PictureBox && (string)x.Tag == "Coin" || x is PictureBox && (string)x.Tag == "gas" || x is PictureBox && (string)x.Tag == "Ship" || x is PictureBox && (string)x.Tag == "enemy" || x is Label && (string)x.Tag == "floating" || x is PictureBox && (string)x.Tag == "doorl2" || x is PictureBox && (string)x.Tag == "shieldcollecttag" || x is PictureBox && (string)x.Tag == "medkitcollecttag" || x is PictureBox && (string)x.Tag == "speedcollecttag" || x is PictureBox && (string)x.Tag == "spiketraps") 
+				if (x is PictureBox && (string)x.Tag == "Platform_l2" || x is PictureBox && (string)x.Tag == "Coin" || x is PictureBox && (string)x.Tag == "gas" || x is PictureBox && (string)x.Tag == "Ship" || x is PictureBox && (string)x.Tag == "enemy" || x is Label && (string)x.Tag == "floating" || x is PictureBox && (string)x.Tag == "doorl2" || x is PictureBox && (string)x.Tag == "shieldcollecttag" || x is PictureBox && (string)x.Tag == "medkitcollecttag" || x is PictureBox && (string)x.Tag == "speedcollecttag" || x is PictureBox && (string)x.Tag == "spiketraps" || x is PictureBox && (string)x.Tag == "medkit" || x is PictureBox && (string)x.Tag == "speed" || x is PictureBox && (string)x.Tag == "shield") 
 				{
 
 

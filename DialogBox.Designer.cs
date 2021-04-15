@@ -126,7 +126,7 @@
             this.Controls.Add(this.yesbutton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DialogBox";
-            this.Text = "Game Over";
+            this.Text = "Classified Mission - Game Over";
             this.Load += new System.EventHandler(this.DialogBox_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -141,21 +141,6 @@ you have been sent a new ship, but you will need gas for it, as well as some coi
 Just in case if you needed anything on the way to make your journey a bit easier. 
 </value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Movements: 
-
-Arrow Up | Space = Jump 
-Arrow Left | A = Go left
-Arrow Right | D = Go Right
-
----- ------ ------ ------ ------
-
-Interactables: 
-
-C = Use Medkit
-V = Use Shield
-B = Use Speed Booster</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
